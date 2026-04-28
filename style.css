@@ -1,71 +1,109 @@
+/* GLOBAL */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #0d1117;
   color: #c9d1d9;
+  line-height: 1.6;
 }
 
 a {
   color: #58a6ff;
   text-decoration: none;
+  transition: 0.3s;
 }
 
+a:hover {
+  color: #79c0ff;
+}
+
+/* LAYOUT */
 .container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
   max-width: 1200px;
   margin: auto;
 }
 
+/* SIDEBAR */
 .sidebar {
   flex: 1;
-  padding: 20px;
-  background-color: #161b22;
-  border-radius: 8px;
-  margin-right: 20px;
-  max-width: 300px;
+  min-width: 260px;
+  padding: 25px;
+  background: linear-gradient(145deg, #161b22, #0d1117);
+  border-radius: 12px;
   text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 2px solid #30363d;
+  border: 3px solid #30363d;
+  transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
 }
 
 .username {
   color: #8b949e;
-  font-size: 0.9em;
+  font-size: 0.95em;
   margin-bottom: 10px;
 }
 
 .bio {
-  font-size: 0.9em;
+  font-size: 0.95em;
   margin-bottom: 20px;
 }
 
 .contact p {
   font-size: 0.85em;
-  margin: 5px 0;
+  margin: 8px 0;
 }
 
+/* MAIN CONTENT */
 .content {
   flex: 3;
-  padding: 20px;
+  min-width: 300px;
+  padding: 25px;
   background-color: #161b22;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-.content h1, .content h2 {
+/* HEADINGS */
+.content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.content h2 {
   color: #58a6ff;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 5px;
 }
 
+.content h3 {
+  margin-top: 15px;
+  color: #c9d1d9;
+}
+
+/* LISTS */
 ul {
   list-style: none;
-  padding-left: 20px;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 6px 0;
 }
 
 ul li::before {
@@ -74,11 +112,47 @@ ul li::before {
   margin-right: 8px;
 }
 
+/* PROJECT CARDS */
+section h3 {
+  margin-top: 15px;
+}
+
+section p {
+  font-size: 0.95em;
+  color: #8b949e;
+}
+
+section h3 + p {
+  background-color: #0d1117;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  transition: 0.3s;
+}
+
+section h3 + p:hover {
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+}
+
+/* BLOCKQUOTE */
 blockquote {
   margin-top: 30px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-left: 4px solid #58a6ff;
   font-style: italic;
   color: #8b949e;
   background-color: #0d1117;
+  border-radius: 6px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    margin-right: 0;
+  }
 }
