@@ -7,7 +7,7 @@ Welcome to my GitHub portfolio! I'm a tech enthusiast, aspiring data analyst, an
 
 ## 📝 About Me
 
-- 🎓 2nd-year CSIT student at **Dronacharya Group of Institutions**
+- 🎓 3rd-year CSIT student at **Dronacharya Group of Institutions**
 - 💡 Passionate about **Data Science**, **AI/ML**, and building impactful tech for social good
 - 🚀 Learning by doing — through **AICTE Internships**, **TechSaksham**, **Hackathons**, and **GDSC**
 - ✨ Exploring projects like **SAGE**, **GreenPoints**, and **Tenure**
